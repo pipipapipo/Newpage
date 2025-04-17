@@ -3,110 +3,183 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Name - Portfolio</title>
+  <title>My Cool Site</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background: #f9f9f9;
-      color: #333; 
+      box-sizing: border-box;
     }
-    header {
-      background: #4a90e2;
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar Styles */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
       color: white;
-      padding: 2rem;
-      text-align: center;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
     }
-    section {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+
+    nav .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
     }
-    .project {
-      background: white;
-      padding: 1rem;
-      margin-bottom: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
     }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      color: #777;
-      font-size: 0.9rem;
-    }
-    a {
-      color: #4a90e2;
+
+    nav ul li a {
+      color: white;
       text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding-top: 4rem;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+    }
+
+    section {
+      padding: 5rem 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    section:nth-of-type(odd) {
+      background-color: #fff;
+    }
+
+    section:nth-of-type(even) {
+      background-color: #f4f4f4;
+    }
+
+    /* WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    .whatsapp-float img {
+      width: 60px;
+      height: 60px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 2rem;
     }
   </style>
 </head>
 <body>
-  <!-- Header section -->
-  <header>
-    <h1>Chee Jun Hong</h1>
-    <p>Short tagline or introduction (e.g., "Web Developer | Tech Enthusiast")</p>
-  </header>
 
-  <!-- About section -->
-  <section>
-    <h2>About Me</h2>
-    <p>
-      <!-- Replace this paragraph with your own bio -->
-      Strategic MBA graduate and Certified ScrumMaster with strong analytical skills and a results-driven approach to project management. Committed to lean management, automation, continuous improvement, and exceeding performance goals through attention to detail and operational efficiency.
-    </p>
+  <!-- Top of Page Anchor -->
+  <div id="top"></div>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">Chee Jun Hong</div>
+    <ul>
+      <li><a href="#top">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <p style="font-size:smaller;"Hello, I am </p>
+<h1>Chee Jun Hong</h1>
+  </div>
+
+  <!-- Main Content -->
+  <section id="about">
+    <h2>About</h2>
+    <p>Strategic MBA graduate and Certified ScrumMaster with strong analytical skills and a results-driven approach to project management. Committed to lean management, automation, continuous improvement, and exceeding performance goals through attention to detail and operational efficiency</p>
   </section>
 
-  <!-- Projects section -->
-  <section>
+  <section id="projects">
     <h2>Projects</h2>
-
-    <!-- Project 1 -->
-    <div class="project">
-      <h3>Project Title 1</h3>
-      <p>
-        <!-- Short description of the project -->
-        A short description of what this project does and what you learned or used to build it.
-      </p>
-      <a href="https://github.com/yourusername/project1" target="_blank">View on GitHub</a>
-    </div>
-
-    <!-- Project 2 -->
-    <div class="project">
-      <h3>Project Title 2</h3>
-      <p>
-        Another cool thing you made. Mention any tools or frameworks you used.
-      </p>
-      <a href="https://github.com/yourusername/project2" target="_blank">View on GitHub</a>
-    </div>
-
-    <!-- Add more project blocks as needed -->
+    <p>List some of your work here. You can add images, links, and more sections as needed.</p>
   </section>
 
-  <!-- Contact section -->
-  <section>
-    <h2>Contact Me</h2>
-<!-- WhatsApp Button -->
-  <a aria-label="Chat on WhatsApp" href="https://wa.me/6581007753?text=Hi%2C%20I%20found%20your%20website%20and%20would%20like%20to%20connect!" target="_blank">
-    <img alt="Chat on WhatsApp" src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" width="50" /> </a>    
-    <p>Email: junhong.chee@pipipapipo.com</p>
-    <p>Location: Singapore</p>
-    <!-- You can add a contact form or social media links here -->
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>   
+  <br><p>Feel free to reach out by filling in the form below.</p><br>
+  <form action="https://formspree.io/f/mnqewwky" method="POST" style="max-width: 500px;">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required style="width: 100%; padding: 0.5rem; margin-bottom: 0.25rem;"><br>
+    <small id="email-error" style="color: red; display: none;">Please enter a valid email address.</small><br>
+
+    <label for="phone">Phone Number:</label><br>
+    <input type="tel" id="phone" name="phone" required style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="5" style="width: 100%; padding: 0.5rem; margin-bottom: 1rem;"></textarea><br>
+
+    <button type="submit" style="padding: 0.75rem 1.5rem;">Send</button>
+  </form>
+</section>
+
   </section>
-<!-- Floating WhatsApp Chat Button -->
-<a aria-label="Chat on WhatsApp"
-   href="https://wa.me/6581007753?text=Hi%2C%20I%20found%20your%20website%20and%20would%20like%20to%20connect!"
-   target="_blank"
-   style="position: fixed; bottom: 20px; right: 20px; z-index: 100;">
-  <img alt="Chat on WhatsApp"
-       src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png"
-       width= "70" height="70"/>
-</a>
+
   <!-- Footer -->
   <footer>
-    &copy; 2025 Chee Jun Hong | <a href="https://github.com/yourusername">GitHub</a>
+    &copy; 2025 Chee Jun Hong. All rights reserved.
   </footer>
+
+  <!-- WhatsApp Chat Button -->
+  <a class="whatsapp-float"
+     aria-label="Chat on WhatsApp"
+     href="https://wa.me/6581007753?text=Hi%2C%20I%20found%20your%20website%20and%20would%20like%20to%20connect!"
+     target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png"
+         alt="Chat on WhatsApp" />
+  </a>
+
 </body>
 </html>
-
